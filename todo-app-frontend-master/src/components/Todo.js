@@ -30,7 +30,7 @@ class Todo extends Component {
   render() {
     const { createdAt, title, finished } = this.props.todo;
     let classes = "card";
-    if (finished) classes += " border-success";
+    if (finished) {classes += " border-success"} else {classes = " border-non-success" };
 
     return (
       <div className="todo mb-2">
@@ -38,7 +38,7 @@ class Todo extends Component {
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
             <h6 className="card-subtitle text-muted mb-2">
-              Pridané: {moment(createdAt).format("DD.MM.'YY")}
+              Pridané: {moment(createdAt).format("DD MMM.'YY")}
             </h6>
             {this.renderText()}
             <TodoButtons

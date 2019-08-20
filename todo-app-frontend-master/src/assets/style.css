@@ -6,9 +6,9 @@
   width: 350px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 7px;
-  border: 1px solid grey;
-  border-top: 3px solid red;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
 }
 
 .card {
@@ -18,4 +18,9 @@
 
 .border-success {
   border-top: 3px solid green;
+  
+}
+
+.border-non-success {
+  border-top: 3px solid red;
 }
