@@ -38,7 +38,7 @@ class Todo extends Component {
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
             <h6 className="card-subtitle text-muted mb-2">
-              Pridané: {moment(createdAt).format('MM Do YY')}
+              Pridané: {moment(createdAt).format("DD.MM.'YY")}
             </h6>
             {this.renderText()}
             <TodoButtons

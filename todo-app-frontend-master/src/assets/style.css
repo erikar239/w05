@@ -1,9 +1,21 @@
 .todos {
   margin: 0 -10px;
-}
+  }
 
 .todo {
   width: 350px;
   margin-left: 10px;
   margin-right: 10px;
+  border-radius: 7px;
+  border: 1px solid grey;
+  border-top: 3px solid red;
+}
+
+.card {
+  border:0;
+  border-radius: 0;
+}
+
+.border-success {
+  border-top: 3px solid green;
 }
