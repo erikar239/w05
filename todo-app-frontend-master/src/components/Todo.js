@@ -15,11 +15,18 @@ class Todo extends Component {
     );
   };
 
+  handleStart = async () => {
+    await axios.patch("/todos/" + this.props.todo.id), {
+      state: 'inProgress';
+    }
+    this.props.getState();
+  }
+
   handleFinish = async () => {
     await axios.patch("/todos/" + this.props.todo.id, {
-      finished: true
+      state: 'finished';
     });
-    this.props.onFinish();
+    this.props.getState();
   };
 
   handleRemove = async () => {

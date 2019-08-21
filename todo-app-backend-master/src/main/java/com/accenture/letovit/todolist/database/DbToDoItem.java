@@ -18,7 +18,7 @@ public class DbToDoItem {
 
 	private String text;
 
-	private boolean finished;
+	private String state;
 
 	private String createdAt;
 
@@ -45,13 +45,33 @@ public class DbToDoItem {
 	public void setText(String text) {
 		this.text = text;
 	}
+	
+	//public boolean isFinished() {
+	//return finished;
+	//}
 
-	public boolean isFinished() {
-		return finished;
+	//public void setFinished(boolean finished) {
+	//this.finished = finished;
+	//}
+	
+	public String isStarted() {
+		return state;
+	}
+	
+	public String inProgress() {
+		return state;
+	}
+	
+	public String isFinished() {
+		return state;
 	}
 
-	public void setFinished(boolean finished) {
-		this.finished = finished;
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
 	}
 
 	public String getCreatedAt() {

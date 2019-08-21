@@ -109,7 +109,7 @@ public class ToDoListController {
 	public void updateToDoItem(@PathVariable String identifier, @RequestBody UpdateRequest requestBody) {
 		// set single todo item to finished and save the change to DB
 		DbToDoItem dbToDoItem = repository.findById(identifier).get();
-		dbToDoItem.setFinished(requestBody.isFinished());
+		dbToDoItem.setState(requestBody.getState());
 		repository.save(dbToDoItem);
 	}
 }
