@@ -5,14 +5,14 @@ package com.accenture.letovit.todolist;
  * It is converted from JSON to Java Object when request is received by Spring.
  */
 public class UpdateRequest {
-	private boolean finished;
+	private String todoState;
 
-	public boolean isFinished() {
-		return finished;
+	public String todoState () {
+		return todoState;
 	}
 
-	public void setFinished(boolean finished) {
-		this.finished = finished;
+	public void setTodoState(String todoState) {
+		this.todoState = todoState;
 	}
 	
 	

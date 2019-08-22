@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 class AddTodo extends Component {
   state = {
     title: "",
-    text: ""
+    text: "",
   };
 
   handleSubmit = async event => {
@@ -12,7 +12,7 @@ class AddTodo extends Component {
     await this.props.onAdd(this.state);
     this.setState({
       title: '',
-      text: ''
+      text: '',
     });
     this.props.history.push("/");
   };
@@ -51,7 +51,7 @@ class AddTodo extends Component {
           className="btn btn-outline-success"
           disabled={!title}
         >
-          Save
+          Uložiť
         </button>
       </form>
     );

@@ -15,18 +15,19 @@ class Todo extends Component {
     );
   };
 
+ 
   handleStart = async () => {
-    await axios.patch("/todos/" + this.props.todo.id), {
-      state: 'inProgress';
-    }
-    this.props.getState();
+    await axios.patch("/todos/" + this.props.todo.id, {
+      todoState: 'inProgress'
+    })
+    this.props.onStart();
   }
 
   handleFinish = async () => {
     await axios.patch("/todos/" + this.props.todo.id, {
-      state: 'finished';
+      todoState: 'finished'
     });
-    this.props.getState();
+    this.props.onFinish();
   };
 
   handleRemove = async () => {
@@ -35,9 +36,9 @@ class Todo extends Component {
   };
 
   render() {
-    const { createdAt, title, finished } = this.props.todo;
+    const { createdAt, title, state } = this.props.todo;
     let classes = "card";
-    if (finished) {classes += " border-success"} else {classes = " border-non-success" };
+    if (state === 'finished') {classes += " border-success"} else {classes = " border-non-success" };
 
     return (
       <div className="todo mb-2">
@@ -50,6 +51,7 @@ class Todo extends Component {
             {this.renderText()}
             <TodoButtons
               todo={this.props.todo}
+              onStart = {this.handleStart}
               onFinish={this.handleFinish}
               onRemove={this.handleRemove}
             />

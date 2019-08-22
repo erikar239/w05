@@ -14,7 +14,7 @@ public class ToDoItemConverter {
 		DbToDoItem target = new DbToDoItem();
 		
 		target.setCreatedAt(source.getCreatedAt());
-		target.setFinished(source.isFinished());
+		target.setState(source.getState());
 		target.setText(source.getText());
 		target.setTitle(source.getTitle());
 		
@@ -30,7 +30,7 @@ public class ToDoItemConverter {
 		ToDoItem target = new ToDoItem();
 		
 		target.setCreatedAt(source.getCreatedAt());
-		target.setFinished(source.isFinished());
+		target.setState(source.getState());
 		target.setText(source.getText());
 		target.setTitle(source.getTitle());
 		

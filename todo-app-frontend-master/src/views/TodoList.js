@@ -10,8 +10,13 @@ class TodoList extends Component {
     return (
       <Masonry className="todos">
         {todos.map((todoData) => {
+
+          const handleStartTodo = () => {
+            todoData.state = 'inProgress';
+            this.props.onEdit(todoData);
+          }
           const handleFinishTodo = () => {
-            todoData.finished = true;
+            todoData.state = 'finished';
             this.props.onEdit(todoData);
           };
 
@@ -23,6 +28,7 @@ class TodoList extends Component {
             <Todo
               todo={todoData}
               key={todoData.id}
+              onStart={handleStartTodo}
               onFinish={handleFinishTodo}
               onRemove={handleRemoveTodo}
             />
