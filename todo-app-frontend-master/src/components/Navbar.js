@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 class Navbar extends Component {
   render () {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-info">
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav">
 
             <li className="nav-item">
               <Link className="nav-link" to="/">
-                Todos
+                Úlohy
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/add">
-                Add todo
+                Pridať 
               </Link>
             </li>
 

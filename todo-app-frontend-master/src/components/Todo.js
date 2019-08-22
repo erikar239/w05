@@ -38,7 +38,15 @@ class Todo extends Component {
   render() {
     const { createdAt, title, state } = this.props.todo;
     let classes = "card";
-    if (state === 'finished') {classes += " border-success"} else {classes = " border-non-success" };
+    if (state === 'finished') {
+      classes += " border-success"
+    } 
+    else if (state === 'inProgress') {
+      classes += " border-in-progress " 
+    }
+    else {
+      classes = "border-non-success"
+    }
 
     return (
       <div className="todo mb-2">
