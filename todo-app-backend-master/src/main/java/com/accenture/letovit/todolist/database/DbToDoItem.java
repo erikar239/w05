@@ -19,6 +19,8 @@ public class DbToDoItem {
 	private String text;
 
 	private String state;
+	
+	private String importance;
 
 	private String createdAt;
 
@@ -80,6 +82,14 @@ public class DbToDoItem {
 
 	public void setCreatedAt(String createdAt) {
 		this.createdAt = createdAt;
+	}
+
+	public String getImportance() {
+		return importance;
+	}
+
+	public void setImportance(String importance) {
+		this.importance = importance;
 	}
 
 }

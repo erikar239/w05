@@ -15,6 +15,15 @@ class Todo extends Component {
     );
   };
 
+  renderImportance = () => {
+    const { importance } = this.props.todo;
+    if (!importance) return null;
+
+    return (
+      <div>{importance}</div>
+    );
+  }
+
  
   handleStart = async () => {
     await axios.patch("/todos/" + this.props.todo.id, {
@@ -63,6 +72,9 @@ class Todo extends Component {
               onFinish={this.handleFinish}
               onRemove={this.handleRemove}
             />
+          </div>
+          <div className="card-footer text-muted">
+              {this.renderImportance()}
           </div>
         </div>
       </div>

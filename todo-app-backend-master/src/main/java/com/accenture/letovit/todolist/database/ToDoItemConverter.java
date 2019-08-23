@@ -17,6 +17,7 @@ public class ToDoItemConverter {
 		target.setState(source.getState());
 		target.setText(source.getText());
 		target.setTitle(source.getTitle());
+		target.setImportance(source.getImportance());
 		
 		target.setIdentifier(identifier);
 		
@@ -33,6 +34,7 @@ public class ToDoItemConverter {
 		target.setState(source.getState());
 		target.setText(source.getText());
 		target.setTitle(source.getTitle());
+		target.setImportance(source.getImportance());
 		
 		target.setId(source.getIdentifier());
 		

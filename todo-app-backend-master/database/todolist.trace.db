@@ -632,3 +632,11 @@ ALTER TABLE DB_TO_DO_ITEM ADD STATE DEFAULT 'notStarted' NOT NULL [50004-199]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-08-23 12:12:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Hodnota je príliš dlhá pre stĺpec """IMPORTANCE"" VARCHAR(10)": "'low importance' (14)"
+Value too long for column """IMPORTANCE"" VARCHAR(10)": "'low importance' (14)"; SQL statement:
+insert into db_to_do_item (created_at, importance, state, text, title, identifier) values (?, ?, ?, ?, ?, ?) [22001-199]
+2019-08-23 12:14:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Hodnota je príliš dlhá pre stĺpec """IMPORTANCE"" VARCHAR(10)": "'low importance' (14)"
+Value too long for column """IMPORTANCE"" VARCHAR(10)": "'low importance' (14)"; SQL statement:
+insert into db_to_do_item (created_at, importance, state, text, title, identifier) values (?, ?, ?, ?, ?, ?) [22001-199]

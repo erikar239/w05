@@ -2,19 +2,20 @@
   margin: 0 -10px;
   }
 
-  .card {
-    border:0;
-  }
-
 .todo {
   width: 350px;
-  height:175px;
   margin-left: 10px;
   margin-right: 10px;
   border-left: 1px solid grey;
   border-right: 1px solid grey;
   border-bottom: 1px solid grey;
   border-radius: 15px;
+}
+
+.card {
+  border:0px;
+  margin-bottom: 7px;
+  padding:0px;
 }
 
 .border-success {
@@ -38,4 +39,16 @@
   right: 10px;
 }
 
+.card-text {
+  word-wrap: break-word;
+}
+
+.btn {
+  margin: 0px;
+}
+
+
+.clear {
+  clear:both;
+}
 

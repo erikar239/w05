@@ -5,6 +5,7 @@ class AddTodo extends Component {
   state = {
     title: "",
     text: "",
+    importance: "",
   };
 
   handleSubmit = async event => {
@@ -13,6 +14,7 @@ class AddTodo extends Component {
     this.setState({
       title: '',
       text: '',
+      importance: '',
     });
     this.props.history.push("/");
   };
@@ -25,7 +27,7 @@ class AddTodo extends Component {
   };
 
   render() {
-    const { title, text } = this.state;
+    const { title, text, importance } = this.state;
 
     return (
       <form onSubmit={this.handleSubmit}>
@@ -45,6 +47,20 @@ class AddTodo extends Component {
           className="form-control mb-2"
           placeholder="Text"
         />
+      
+        <select 
+          name = "importance"
+          value={importance}
+          onChange = {this.handleChange}
+          className ="form-control mb-2"
+          required
+        >
+          <option></option>
+          <option value="low">low</option>
+          <option value="medium">mediu</option>
+          <option value="height">height</option>
+        </select>
+        
 
         <button
           type="submit"
