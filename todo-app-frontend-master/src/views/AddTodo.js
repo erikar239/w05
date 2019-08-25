@@ -5,7 +5,7 @@ class AddTodo extends Component {
   state = {
     title: "",
     text: "",
-    importance: "",
+    importance: "low",
   };
 
   handleSubmit = async event => {
@@ -47,19 +47,20 @@ class AddTodo extends Component {
           className="form-control mb-2"
           placeholder="Text"
         />
-      
+
+        <h6><br/>Vyber prioritu...</h6>
         <select 
-          name = "importance"
-          value={importance}
-          onChange = {this.handleChange}
-          className ="form-control mb-2"
-          required
-        >
-          <option></option>
-          <option value="low">low</option>
-          <option value="medium">mediu</option>
-          <option value="height">height</option>
-        </select>
+           name = "importance"
+           value={importance}
+           onChange = {this.handleChange}
+           className="custom-select custom-select-sm mb-3" 
+           id="inlineFormCustomSelect"
+         >
+           <option value="low">nízka</option>
+           <option value="medium">stredná</option>
+           <option value="height">vysoká</option>
+         </select>
+            
         
 
         <button

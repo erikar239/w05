@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+//import ReactDOM from 'react-dom';
 import { HashRouter, Switch, Route } from "react-router-dom";
 import moment from "moment";
 import findIndex from "lodash/findIndex";
@@ -8,6 +9,11 @@ import axios from "./axios";
 import AddTodo from "./views/AddTodo";
 import TodoList from "./views/TodoList";
 import Navbar from "./components/Navbar";
+
+//import { library } from '@fortawesome/fontawesome-svg-core';
+//import {faSmile, faExclamationCircle} from '@fortawesome/free-solid-svg-icons';
+
+//library.add (faSmile, faExclamationCircle);
 
 class App extends Component {
   state = {
@@ -88,5 +94,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

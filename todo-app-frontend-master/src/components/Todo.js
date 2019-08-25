@@ -5,19 +5,28 @@ import axios from "../axios";
 import TodoButtons from "./TodoButtons";
 import moment from "moment";
 
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { faSmile } from "@fortawesome/free-solid-svg-icons";
+
 class Todo extends Component {
   renderText = () => {
     const { text } = this.props.todo;
-    if (!text) return null;
+    if (!text)  return null;
 
     return (
       <div className="card-text" dangerouslySetInnerHTML={{ __html: text }} />
     );
   };
 
+
   renderImportance = () => {
     const { importance } = this.props.todo;
-    if (!importance) return null;
+    //let faviconUrl = 
+    if (!importance) return "low";
+    
+    /*if (importance.value === "low") {
+      icon += "dotLow"
+    }*/
 
     return (
       <div>{importance}</div>
@@ -73,7 +82,7 @@ class Todo extends Component {
               onRemove={this.handleRemove}
             />
           </div>
-          <div className="card-footer text-muted">
+            <div className="card-footer">
               {this.renderImportance()}
           </div>
         </div>
@@ -83,3 +92,5 @@ class Todo extends Component {
 }
 
 export default Todo;
+
+

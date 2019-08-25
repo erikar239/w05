@@ -24,7 +24,7 @@ class TodoButtons extends Component {
 
     return (
       <>
-        <button type="button" class="close" aria-label="Close" onClick={this.props.onRemove}>
+        <button type="button" className="close" aria-label="Close" onClick={this.props.onRemove}>
           <span aria-hidden="true">&times;</span>
         </button>
         {startButton}
