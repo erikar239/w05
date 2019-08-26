@@ -30,7 +30,7 @@ class Todo extends Component {
 
     return (
       <div>
-        <span className={icon}>    </span>
+        <span className={icon}></span>
         <span> </span>
         {importance}
       </div>

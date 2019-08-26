@@ -19,12 +19,6 @@ class AddTodo extends Component {
     this.props.history.push("/");
   };
 
-  handleChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
 
   render() {
     const { title, text, importance } = this.state;
