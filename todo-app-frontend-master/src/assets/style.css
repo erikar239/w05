@@ -45,7 +45,6 @@
   margin: 0px;
 }
 
-
 .clear {
   clear: both;
 }
@@ -54,23 +53,29 @@
   border-radius: 0px 0px 15px 15px;
 }
 
+.importanceIcon{
+  display: inline-flex;
+  height: 15px;
+  width:15px;
+  border-radius:25px;
+  background-color: brown;
+  margin-bottom: -2px;
+}
+
 .dotLow{
-  background-color: #ffd9e6;
+  background-color: yellowgreen;
 }
 
 .dotMedium {
-  background-color:#f788ae;
+  background-color: blue;
 }
 
 .dotHeight {
-  background-color: #ff1968;
+  background-color: red;
 }
 
-.importanceIcon{
-  background-color: white;
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
 }
 
-.navbar {
-  min-height: 30px;
-}
 

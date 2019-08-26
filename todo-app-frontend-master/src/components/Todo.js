@@ -5,9 +5,6 @@ import axios from "../axios";
 import TodoButtons from "./TodoButtons";
 import moment from "moment";
 
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faSmile } from "@fortawesome/free-solid-svg-icons";
-
 class Todo extends Component {
   renderText = () => {
     const { text } = this.props.todo;
@@ -20,20 +17,27 @@ class Todo extends Component {
 
 
   renderImportance = () => {
-    const { importance } = this.props.todo;
-    //let faviconUrl = 
-    if (!importance) return "low";
+    const { importance } = this.props.todo; 
+    let icon = "importanceIcon";
     
-    /*if (importance.value === "low") {
-      icon += "dotLow"
-    }*/
+   if (importance === 'low') {
+      icon += " dotLow"
+    } else if (importance === 'medium') {
+      icon += " dotMedium"
+    } else if (importance === 'height'){
+      icon += " dotHeight"
+    } 
 
     return (
-      <div>{importance}</div>
+      <div>
+        <span className={icon}>    </span>
+        <span> </span>
+        {importance}
+      </div>
     );
   }
 
- 
+
   handleStart = async () => {
     await axios.patch("/todos/" + this.props.todo.id, {
       todoState: 'inProgress'
